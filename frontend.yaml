@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: frontend-container
-        image: ashutosh4782/photostudio-frontend:latest
+        image: dhaniga/photostudio-frontend:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 80
