@@ -1,0 +1,25 @@
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: photostudio-app
+  namespace: photostudio
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: photostudio-app
+  template:
+    metadata:
+      labels:
+        app: photostudio-app
+    spec:
+      containers:
+      - name: photostudio-container
+        image: dhaniga/photostudio-app:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 3000
+        envFrom:
+        - configMapRef:
+            name: photostudio-config
