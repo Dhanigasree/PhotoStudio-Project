@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: backend-container
-        image: ashutosh4782/photostudio-backend:latest
+        image: dhaniga/photostudio-backend:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 3000
