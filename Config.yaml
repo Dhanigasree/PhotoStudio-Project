@@ -3,10 +3,6 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: photostudio-config
-  namespace: photostudio
+  namespace: photostudio-ns
 data:
-  # Example configuration values
-  APP_NAME: "PhotoStudio"
-  APP_PORT: "3000"
-  IMAGE_QUALITY: "high"
-  MAX_UPLOAD_SIZE_MB: "50"
+  PORT: "3000"
